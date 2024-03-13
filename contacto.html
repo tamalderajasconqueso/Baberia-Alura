@@ -1,0 +1,100 @@
+<!DOCTYPE html> <!--Para indicar que es estructura HTML 5-->
+
+<html>
+    <head><!--Aqui van etiquetas informativas-->
+        <meta charset="UTF-8"> <!--Aqui se indica el diccionario a utilizar-->
+        <title>Contacto - Barberia Alura</title>
+        <!--Este archivo reset.css es importante, es un archivo css descargado a parte el cual nos ayuda a eliminar configuraciones que hace el navegador por defecto. Esta colocado estrategicamente aqui para borrar el formato que da el navegador y dar paso al nuestro.-->
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css"> <!--Referencia al css-->
+    </head>
+
+    <body>
+
+        <header><!--Encabezado-->
+            <div class="caja">
+                <h1><img src="imagenes/logo.png" alt="Logo"> </h1> <!--Imagen de logo--><!--h1 es para colocarlo como titulo-->
+                <!--alt="" Le indicamos al usuario con un texto alternativo de que no cargue la imagen de que se trata. Esto es siempre recomendable -->
+                <nav><!--Esto es para el menu de navegacion-->
+                    <ul><!--Listas-->
+                        <li><a href="index.html">HOME</a></li><!--Items-->
+                        <li><a href="productos.html">PRODUCTOS</a></li>
+                        <li><a href="contacto.html">CONTACTO</a></li>
+                        <!--<a href="index.html"> Sirve para crear el vinculo osea dar clic para que redidija a otro lado-->
+                    </ul>
+                 </nav>
+            </div>
+        </header> <!--Encabezado-->
+
+        <main>
+            <form><!--Aqui vamos con los formularios.-->
+                <!--Input con cajas de texto-->
+                <label for="nombreyApellido">Nombre y Apeliido</label><!--Para indicarle al usuario siempre va asociado con el input como el de abajo.  Esta asociado mediante id con el input-->
+                <input type="text" id="nombreyApellido" class="input-padron" required><!--Crea caja de texto para el usuario --><!--Con l de requerido se especifica que el campo es obligatorio-->
+                <label for="correoelectonico">Correo Electronico plox</label>
+                <input type="email" id="correoelectonico" class="input-padron" required placeholder="email@xxxx.com">  <!--Aqui se especifica tipo de dato email-->    
+                <!--placeholder="email@xxxx.com" Es para colocar el texto fantasmita dentro de los recuadros que ayudan a saber que va ahi-->          
+                <label for="telefono">Telefono</laber>
+                <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) XXXXXXXXXX"><!--Aqui se especifica tipo de dato celular-->
+                <label for="mensaje">Mensaje</label>
+                <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea><!--Es la caja de texto mas grande, con colds y rows definimos el tamaño base de la caja como columnas y filas a abarcar dentro de espacio. -->
+
+                <fieldset><!--Agrupa items del mismo grupo-->
+                <!--div para dividir contenidos-->
+                    <legend>¿Como le gustaria ser contactado?</legend><!--Aqui en lugar de p se usa legend-->
+                
+                    <!--Input de seleccion-->
+                    <!--Los enlazamos a todos con  name="contactoo". Esto se hace para que solo se pueda seleccionar uno-->
+                    <label for="radioEmail"><input type="radio" name="contactoo" value="Email "id="radioEmail">Email</label>
+                    <label for="radio-telefono"><input type="radio" name="contactoo" value="Telefono"id="radio-telefono">Telefono</label>
+                    <label for="radio-whatssap"><input type="radio" name="contactoo" value="Whattsap"id="radio-whatssap" checked>Whattsap</label> <!--checked es para que ya vengo uno marcado por defecto. -->
+                    
+                </fieldset>
+
+                <fieldset>
+                    <!--Selector de horario. Es para escoger de la lista-->
+                    <legend>¿En que horario prefiere que le atendamos?</legend>
+                    <select>
+                        <option>Mañana.</option>
+                        <option>Tarde.</option>
+                        <option>Noche.</option>
+                    </select>
+                </fieldset>
+
+                <label class="checkbox"><input type="checkbox" checked>¿Le gustariar recibir novedades de la Bareberia de barbas Alura?</label><!--type="checkbox" es para colocar una cajita como acepto terminos y condiciones. Si lo colocamos dentro de label directamente no es necesario referenciarlo con id. --><!--checked es para que ya vengo uno marcado por defecto. -->
+                
+                <input type="submit" value="Enviar formulario." class="enviar"> <!--Para hacer el botoncito de enviar. Value es para colocar lo que dira dentro el boton de enviar-->
+
+            </form>
+            
+            <table><!--Para colocar una tabla-->
+                <thead><!--Para el encabezado de la tabla.-->
+                    <th>Dia.</th><!--para las celdas de las lineas. -->
+                    <th>Horario.</th>
+                </thead>
+                
+                <tbody><!--Cuerpo de la tabla-->
+                    <tr><!--Las lienas de las tablas-->
+                        <td>Lunes</td><!--para las celdas de las lineas. -->
+                        <td>08h a 20h</td>
+                    </tr>
+                    <tr><!--Las lienas de las tablas-->
+                        <td>Miercoles</td><!--para las celdas de las lineas. -->
+                        <td>08h a 20h</td>
+                    </tr>
+                    <tr><!--Las lienas de las tablas-->
+                        <td>Viernesss</td><!--para las celdas de las lineas. -->
+                        <td>08h a 20h</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </main>
+        
+        <footer><!--Pie de pagina-->
+            <img src="imagenes/logo-blanco.png" alt="Logo">
+            <p class="copy">&copy; Copyright Barberia de la Alura año 2024</p><!--&copy; Es para integrar el simbolo de copyright segun el diccionario-->
+        </footer><!--Pie de pagina-->
+
+    </body>
+</html>

@@ -1,0 +1,69 @@
+
+/*El cuerpo de la pagina*/
+/*Generalmente body va hasta arriba*/
+.titulop{
+    padding-left: 30px;
+}
+
+
+#banner {
+    width: 100%;
+}
+
+.principal{
+    background: #FFFFFF;
+    /*Dar espaciamiento interno*/
+    padding: 20px;
+}
+
+.tituloc{
+    text-align: center;
+
+}
+
+/*p Selectores de parrafos*/
+p{
+    text-align: center;
+    background: #FFC0CB;
+}
+
+
+
+/*strong; aqui esta seleccionando la etiqueta colocada*/
+/*em strong; con esto se dice que se le de la caracteristica a la combinacion de etiquetas*/
+em strong{
+    color: red; 
+
+}
+
+#mision{
+    font-size: 20px;
+}
+
+.diferenciales{
+    background: #FFFFFF;
+    padding: 30px;
+}
+
+
+
+/*El punto al mcomienzo es para definir la clase usada*/
+.items{
+    font-style: italic;
+
+}
+/*Aqui solo le indicamos a la lista que las demas zonas de las lienas de la pagina que usan sean ajustables*/
+ul{
+    display: inline-block;
+    /*Vertical aling nos ayuda a comodar la imagen junto*/
+    vertical-align: top;
+    /*el width: ; nos indica que tanto por ciento usara la lista */
+    width: 20%;
+    /*margin-right: ; es dar sangria tecnicamente del lado indicado*/
+    margin-right: 15%;
+}
+
+.imagendiferente{
+    width: 50%;
+}
+

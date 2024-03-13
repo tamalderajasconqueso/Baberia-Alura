@@ -1,0 +1,62 @@
+<!DOCTYPE html> <!--Para indicar que es estructura HTML 5-->
+
+<html>
+    <head><!--Aqui van etiquetas informativas-->
+        <meta charset="UTF-8"> <!--Aqui se indica el diccionario a utilizar-->
+        <title>Productos - Barberia Alura</title>
+        <!--Este archivo reset.css es importante, es un archivo css descargado a parte el cual nos ayuda a eliminar configuraciones que hace el navegador por defecto. Esta colocado estrategicamente aqui para borrar el formato que da el navegador y dar paso al nuestro.-->
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css"> <!--Referencia al css-->
+    </head>
+
+    <body>
+
+        <header><!--Encabezado-->
+            <div class="caja">
+                <h1><img src="imagenes/logo.png"> </h1> <!--Imagen de logo--><!--h1 es para colocarlo como titulo-->
+                <nav><!--Esto es para el menu de navegacion-->
+                    <ul><!--Listas-->
+                        <li><a href="index.html">HOME</a></li><!--Items-->
+                        <li><a href="productos.html">PRODUCTOS</a></li>
+                        <li><a href="contacto.html">CONTACTO</a></li>
+                        <!--<a href="index.html"> Sirve para crear el vinculo osea dar clic para que redidija a otro lado-->
+                    </ul>
+                 </nav>
+            </div>
+        </header> <!--Encabezado-->
+
+        <main><!--Contenido de la pagina-->
+            <ul class="productos">
+                <li>
+                    <h2>Cabello</h2><!--Titulo-->
+                    <img src="imagenes/cabello.jpg"><!--Imagenes-->
+                    <p class="productoDescripcion">Con tijera o maquina le dejamos como el CR7</p><!--Descripcion -->
+                    <p class="productoPrecio">80.00 Pejecoins</p><!--Precio-->                    
+                </li>
+                <li>
+                    <h2>Barba</h2>
+                    <img src="imagenes/barba.jpg">
+                    <p class="productoDescripcion">Corte y diseño profesional de barba</p>
+                    <p class="productoPrecio">100.00 Pejecoins</p>                    
+                </li>
+                <li>
+                    <h2>Cabello y Barba</h2>
+                    <img src="imagenes/cabello+barba.jpg">
+                    <p class="productoDescripcion">Paquete completo de cabello y barba</p>
+                    <p class="productoPrecio">150.00 Pejecoins</p>                    
+                </li>
+            </ul>
+            
+            
+            
+        </main><!--Contenido de la pagina-->
+
+        <footer><!--Pie de pagina-->
+            <img src="imagenes/logo-blanco.png">
+            <p class="copy">&copy; Copyright Barberia de la Alura año 2024</p><!--&copy; Es para integrar el simbolo de copyright segun el diccionario-->
+        </footer><!--Pie de pagina-->
+
+    </body>
+
+
+</html>

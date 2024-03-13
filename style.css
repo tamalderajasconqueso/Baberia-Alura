@@ -1,0 +1,400 @@
+
+body{
+    font-family: "Source Code Pro", monospace;
+}
+
+
+header {
+    background-color: #BBBBBB;
+    padding: 20px 0;/*Superior inferior. Espaciamiento*/
+}
+
+.caja{/*Se uso el selector de clases*/
+    width: 940px;/*Aqui es anchura. Se crea una caja ara encapsular todo lo que hay en esta clase. Recomendado 940*/
+    position: relative;
+    margin: 0 auto;/*(Superior, inferior). (Laterales).*/
+
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+nav li{/*Aqui solo se altero la forma de listado*/
+    display: inline; /*Con esto le decimos que la lista de navegacion no sea con salto de liena como es por defecto */
+    margin: 0 0 0 15px;/*arriba, derecha, abajo, izquierda*/
+}
+
+nav a{/*Creo que asui es solo para el formato de letras*/
+    text-transform: uppercase; /*Esto transforma las palabras en mayusculas*/
+    color: #000000;/*Color de las letras*/
+    font-weight: bold;/*Define letras negritras.*/
+    font-size: 22px; /*Tamanño de letras*/
+    text-decoration: none;/*Retirar el subrayado por defecto*/
+}
+
+nav a:hover{/*Aqui para capturar movimiento del mouse en la interfaz.*/
+    color: #c78c19;/*Aqui definimos el color a cambiar*/
+    text-decoration: underline;/*Tambien para que lo subraye*/
+
+}
+
+.productos{
+    width: 940px;/*Le decimos que tambien se dapte a los 940 pixeles de pantalla*/
+    margin: 0 auto;
+    padding: 50px;/*El espacio superior para que no este tan pegado*/
+}
+
+.productos li{/*segun o hace referencia a la clase diciendo que es una lista con ese li*/
+    display: inline-block;/*Aqui delimitamos en un blaque el contenido de cada lista*/
+    text-align: center; /*Alineamos texto al centro*/
+    width: 30%;/*Que cada elemento use el 30%, el otro 10% va a ser delespacio entre ellos*/
+    vertical-align: top;/*Algo para alinear en la parte inferior*/
+    margin: 0 1.5%;/*vertical, laterales*/
+    padding: 30px 20px;/*Espaciamiento interno del bloque*/
+    box-sizing: border-box;/*Tamaño de caja, para que no sobre pase lo definido*/
+    border: 2px solid #000000;/*aqui se resume bastante codigo, la version extendida de esto son las siguientes 3 lineas de codigo*/
+    /*
+    border-color: #000000;/*Color del borde
+    border-width: 2px;/*Entendi que es anchira del borde
+    border-style: solid;/*Aqui creo que es para definir la linea
+    */
+    /*Toda esta seccion es para colocar el borde redondeado. */
+    /*
+    border-top-left-radius: 10px;
+    border-top-right-radius: 25px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 50px;
+    */
+    /*border-radius: 10px 25px 40px 50px;/*Comienza por borde superior izquierdo en direccion de las manecillas del reloj. La version extendida de esto esta en comentarios justo arriba de esto*/
+    /*Si lo quieres todo parejo nada mas va asi*/
+    border-radius: 25px;
+}
+
+.productos li:hover{/*Aqui va a ser para que el maus cambie a los cuadrados cuando pase encima de ellos*/
+    border-color: #c78c19;
+}
+
+.productos li:active{/*Aqui es para que haga algo al momento que le demos clic*/
+    border-color: #088c19;/*Cambiar color del borde*/
+}
+
+.productos h2{/*Hace referencia al encabezado a manipuñlar*/
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos li:hover h2{/*Aqui le indicamos que debe de afectar sobre la propiedad del h2*/
+    font-size: 35px;/**/
+}
+
+.productoDescripcion {
+    font-size: 18px;/*Tamaño de letra*/
+}
+
+.productoPrecio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;/*Para separar el precio de la descripcion, lo separa desde arriba*/
+}
+
+footer {
+    text-align: center;
+    background: url(imagenes/bg.jpg);/*Para colocar una imagen de fondo. */
+    padding: 40px;
+}
+
+.copy{
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px;
+
+}
+/*Pagina de contactos*/
+/*main {Esto ya va en la pagina de contacto
+    width: 940px; /*Configuracion base de las paginas con pantallas
+    margin: 0 auto;
+}*/
+
+form{
+    margin: 40px 0;/*Arriba/abajo, costados*/
+}
+
+form label, form p{
+    display: block;/*Esto es para hacer que el elemento de al lado mejor pase por debbajo de este mismo*/
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron{/*No esntiendo muy bien pero con la , veo que se pueden asignar configuraciones a diferenres areas*/
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;/*superior/inferior, lados*/
+    width: 50%;/*Para que se estiendan a la mitad de la pantalla disponible*/
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{/*Toda la parte del boton enviar formulario. */
+    width: 40%;
+    padding: 15px 0;/*arriba abjao, laterales*/
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;/*Quitar borde*/
+    border-radius: 5px;/*Redondear border*/
+    transition: 1s all/*Lo enlazo con la seccion de .enviar:hover*/;
+    cursor: pointer;/*Para cambiar el cursos por al manita con el dedo. */
+}
+
+.enviar:hover{/*IMPORTANTE, NO DAR ESPACIO EN ESTA SECCION. Es para que cambie de colo al pasar ahi con el mouse*/
+    background: darkorange;
+    transform: scale(1.20) rotate(25deg);/*Para aumentar el tamaño cuando el mouse se coloque sobre el elemento*/
+    /*transform: rotate(70deg);Para rotacion. Se colocan juntas para que los ejecute ambos. */
+}
+
+table{
+    margin: 40px 40px;
+}
+
+thead{/*Encabezado de tabla*/
+    background: #555555; 
+    color: white;
+    font-weight: bold;
+}
+
+td, th{/*Para las lienas de la tabla. Que aplique en cuerpo y encabezado como aqui*/
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+
+
+
+
+
+
+/*Css para el home.___________________________________________________________ */
+
+
+.banner{
+    width: 100%;
+}
+/*SELECTORES AVANZADOS*/
+/*main > p{/*> con el simbolo le indicamos que solo aplique en lo que esta colocado directamente en main, no en otros lados
+    background: red;
+}*/
+
+/*img + p{Con esto le indicamos que el parrafoque este a continiuacion de una imagen sea el seleccionado
+    background: yellow;
+}*/
+
+/*img ~ p{/*Con esto indicamos que aplique a todos los parrafos fdespuesde una imagen
+    background: green;
+}*/
+
+/*.principal p:not(#mision){/*Con esto aqui le indicamos que aplique a todo menos lo que esta dentro del id mision
+    background: orange;
+}*/
+
+.principal{
+    padding: 3em 0;
+    background: #fefefe;
+    width: 940px; /*Configuracion base de las paginas con pantallas*/
+    margin: 0 auto;
+}
+
+.titulop{
+    text-align: center;
+    font-size: 2em;/*2em que sea dos veces el tamaño por defecto de la fuente del naveador*/
+    margin: 0 0 1em;
+    clear: left; /*Con esto le decimos que cualquier cosa que venga despues del titulo la limpie. para evitar que las cosas se salgan de aqui por lo que entiendo*/
+    color: rgba(0, 0, 0, 0.671);/*con rgba puedes añadir al final la capacidad de opacidad*/
+    /*text-shadow: 2px 2px 10px blue;/*Para agregar sobra al texto, vertial, horizontal, opacidad, color*/
+}
+
+.titulop::first-letter{/*Para que solo aplique en la primer lera*/
+    font-weight: bold;
+}
+
+p::first-line{/*LLAMAMOS A LOS PARRAFOS, DESPUES LE DECIMOS QUE SOLO APLIQUE EN LA PRIMER LINEA*/
+font-style: italic;
+}
+.titulop::before{/*Aqui le decimso que soloque algo antes que el titulo*/
+    content: "(";/*Aqui le decimos que es lo que va a colocar*/
+}
+
+.titulop::after{/*Aqui le decimos que despue*/
+    content: ")";
+}
+
+.principal p{/*Osea que vamos a modificar los parrafos*/
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.utenciilios{
+    width: 120px;
+    float: left/*Para indicar que es una imagen flotante como en word*/;
+    margin: 0 20px 20px 0;/*Superior, derecha, inferior, izquierda*/
+}
+
+.mapa{
+    padding: 3em 0;
+    background: linear-gradient(#fefefe, #888888);
+    /*Linea recta background: linear-gradient( 90deg, /*Inclinacion en grados orange, blue 50%/*Porcentaje de espacio a usar, red, black );/*Para aplicar un regradado*/
+    /*circular background: radial-gradient(orange, blue 50%/*Porcentaje de espacio a usar, red, black );*/
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapacontenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    padding: 3em 0;
+    background: #888888;
+    /*box-shadow: inset 0 0 30px red;/*Punto de referencia xy, opacidad*/
+}
+
+.contenidodiferenciales{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.listadiferenciales{/*Que se complemente con el espacio de la imagen que es el otro 60%*/
+    width: 40%;
+    display: inline-block;/*Hace lectura de html. Para considerar salto de linea dentro de codigo, ir al html y que vaya todo junto en la ultima linea del bloque*/
+    vertical-align: top;/*para que el texto jutno a la imagen vaya por arriba*/
+
+}
+
+.items{
+    line-height: 1.5;/*Linea de altura. */
+}
+
+.items::before{
+    content: "❉";
+}
+
+.items:first-child{/*A primer elemento del bloque de elementos tener encuenta la pocision del child*/
+    font-weight: bold;
+
+}
+
+
+.imagendiferente{
+    width: 60%;
+    transition: 1s;
+    /*box-shadow: 10px 10px 30px 7px black;/* -10px -10px yellow, -15px 10px rgb(50, 50, 50);/*horizontal, vertial(Se modifica con valores positivos y negativos), difuminacion, expansion ,collor de la sombra*/
+    /*Para agregarotrea sombra en el mismo obejto solamente deja una coma y vuelve a introducir los parametros*/
+    box-shadow: 45px 25px 23px 0px rgba(60, 82, 89, 0.85);
+    /*Hecho con box shadow generator https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator*/
+}
+
+.imagendiferente:hover{
+    opacity: 0.3; /*Opacidad en la imagen*/
+}
+
+.video{
+    width: 60%;
+    margin: 1em auto;
+}
+
+/*Permitir trabajr con excepciones, o dada una condicion aplicar algo diferente*/
+@media screen and (max-width:480px){
+    h1{/*Logo*/
+        text-align: center;
+    }
+    nav{
+        position: static;/*colocar bien el panel de navegacion*/
+    }
+    .caja, .principal, .mapacontenido,.contenidodiferenciales, .video{
+        width: auto;
+    }
+    .listadiferenciales, .imagendiferente{
+        width: 100%;
+    }
+}
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*JERARQUIAS*/
+/*
+form p{/*2 etiquetas
+    color: blue;
+}
+
+p{/*etiqueta
+    color: red;
+}
+
+.test{/*class
+    color: yellow;
+}
+
+p.test{/*Selector de etiqueta mas clase
+    color: orange;
+}
+
+#test{
+    color: pink;
+}
+/*Jerarquias. 
+Comportamiendo de css. 
+suma de pesso relativos
+1er es id/ Digamos que vale 100
+2do es class/ Digamos que vale 10
+3er etiqueta/ Digamos quevale 1
+La summa de estos al momento de definir el elemento a afectar va a ser como le de prioridad
+Lo que tiene mas peso aqui es modificar directamente el html/ Digmos que vale 1000 
+*/
